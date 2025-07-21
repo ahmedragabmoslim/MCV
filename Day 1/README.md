@@ -23,16 +23,4 @@ This repository contains three introductory HTML tasks designed to help you lear
   - Learn how to create ordered and unordered lists using `<ol>` and `<ul>` tags.
   - Understand how to build tables using `<table>`, `<tr>`, `<th>`, and `<td>` tags.
 
-## Additional Resources
-- The file `www.webp` is provided as an image resource for use in your tasks.
-
-## What You Should Learn
-By completing these tasks, you will:
-- Gain a solid understanding of basic HTML structure and elements.
-- Learn how to organize content on a web page.
-- Be able to add images, links, lists, and tables to your HTML documents.
-- Build a foundation for more advanced web development topics.
-
----
-
 Feel free to experiment with the code and try adding your own elements to reinforce your learning!
