@@ -1,0 +1,66 @@
+body {
+  background: #f0f0f0;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #4d3c32;
+  color: white;
+  padding: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  position: relative;
+  z-index: 1;
+}
+
+.container {
+  position: relative;
+  padding: 60px;
+  height: 90vh;
+}
+
+
+.note {
+  width: 150px;
+  height: 150px;
+  background-color: #fff86d;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  padding: 15px;
+  font-weight: bold;
+  font-size: 14px;
+  position: absolute;
+  transform: rotate(-3deg);
+}
+
+
+.note:nth-child(1) {
+  left: 40px;
+  bottom: 100px;
+  transform: rotate(-300eg);
+  position:relative
+}
+
+.note:nth-child(2) {
+  top: 120px;
+  left: 275px;
+  transform: rotate(-5deg);
+}
+
+.note:nth-child(3) {
+  top: 350px;
+  left: 85px;
+  transform: rotate(-2deg);
+}
+
+.help-btn {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;  
+  background-color: #911;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+}
