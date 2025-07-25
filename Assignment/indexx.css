@@ -1,0 +1,102 @@
+
+
+/* أنماط رأس الصفحة (Header) */
+.main-header {
+    background-color: #007bff; /* أزرق غامق كلون الخلفية */
+    color: white;
+    padding: 25px 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.main-header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+.main-header p {
+    margin: 5px 0 0;
+    font-size: 1.1em;
+}
+
+
+.grid-section {
+    display: grid; /* تفعيل نظام الشبكة لهذا القسم */
+    /* الصورة الأصلية تظهر أن الأعمدة ليست متساوية تمامًا.
+       سنستخدم نسبة لتقليد ذلك: مثلاً، النص يأخذ جزءًا أكبر.
+       يمكنك تعديل النسب (مثلاً: 0.8fr 1fr 0.8fr 1fr) أو (1fr 1fr 1fr 1fr) لتجربة.
+       النسبة في الصورة أقرب إلى: نص صغير، صورة كبيرة، نص صغير، صورة كبيرة.
+       لذا سنستخدم: 0.7fr 1.3fr 0.7fr 1.3fr */
+    grid-template-columns: 0.7fr 1.3fr 0.7fr 1.3fr;
+    gap: 1px; /* فواصل رفيعة جداً بين الخلايا لتقليد الجدول */
+    border: 1px solid #ffffff; /* حدود حول القسم ككل */
+    background-color: #f0f0f0; /* خلفية خفيفة جداً بين الخلايا إذا كان هناك gap */
+    border-radius: 5px; /* حواف دائرية للقسم */
+    overflow: hidden; /* لإخفاء أي جزء زائد من المحتوى */
+}
+
+/* أنماط كل عنصر داخل القسم (نص أو صورة) */
+.grid-item {
+    background-color: white; /* خلفية بيضاء لكل خلية (التابل) */
+    padding: 15px; /* مسافة داخلية لكل خلية */
+    border: 1px solid #eee; /* حدود خفيفة جداً بين الخلايا (لتكون كخطوط الجدول) */
+    box-sizing: border-box; /* لضمان أن الـ padding والـ border لا يضيفان للعرض الكلي */
+    display: flex; /* لجعل المحتوى داخل الخلية (النص/الصورة) مرناً */
+    flex-direction: column; /* ترتيب العناصر عمودياً */
+    justify-content: center; /* توسيط المحتوى عمودياً */
+    align-items: flex-start; /* محاذاة النص لليسار افتراضياً */
+}
+
+/* أنماط خاصة بعناصر النص */
+.text-item h2 {
+    color: #0056b3; /* لون أزرق للعناوين */
+    margin-top: 0;
+    font-size: 2.em; /* حجم خط أصغر للعناوين الفرعية */
+    margin-bottom: px;
+}
+
+.text-item p {
+    font-size: 0.95em; /* حجم خط أصغر للفقرات */
+    line-height: 1.5;
+    color: #555;
+}
+
+.image-item {
+    display: flex; /* استخدام Flexbox لتوسيط الصورة */
+    justify-content: center; /* توسيط الصورة أفقياً */
+    align-items: center; /* توسيط الصورة عمودياً */
+    padding: 15px; /* مسافة بادئة أقل للصور لجعلها أكبر قليلاً */
+}
+
+.image-item img {
+    max-width: 50%; /* الصورة تملأ عرض الخلية بالكامل */
+    height: 90%; /* الصورة تملأ ارتفاع الخلية بالكامل */
+    object-fit: cover; /* لضمان أن الصورة تغطي المساحة بالكامل بدون تشويه */
+    display: block;
+    border-radius: 3px; /* حواف دائرية طفيفة للصور */
+}
+
+/* أنماط للتجاوب على الشاشات الصغيرة */
+@media (max-width: 768px) {
+    .supplements-complex-grid-container {
+        padding: 10px;
+        gap: 15px;
+    }
+    .grid-section {
+        grid-template-columns: 1fr; /* عمود واحد فقط على الشاشات الصغيرة */
+        border: none; /* إزالة الحدود الخارجية للقسم */
+        box-shadow: none; /* إزالة الظل للقسم */
+    }
+    .grid-item {
+        border-bottom: 1px solid #eee; /* حدود سفلية فقط بين العناصر في وضع العمود الواحد */
+        border-right: none;
+        padding: 10px;
+        text-align: center; /* توسيط النصوص على الشاشات الصغيرة */
+    }
+    .grid-item:last-child {
+        border-bottom: none; /* إزالة الحد السفلي لآخر عنصر في القسم */
+    }
+    .text-item {
+        align-items: center; /* توسيط النص على الشاشات الصغيرة */
+    }
+}
